@@ -13,17 +13,26 @@ There are two more API.
 1. New Content API: this api will provide the content sorted on date.
 2. Top contents API - sorted on user-interaction[Sort on basis of Number of interactions, both read and like]
 
+I have created 3 microservice and 2 database 
+1. Microservice
+    1. Content 
+    2. User Interaction 
+    3. User
+2. Database
+    1. User Database 
+    2. Content Database 
+
 
 ## List Of All API, provided by our application 
 
 ```diff
-1. api/v1/users/registration  ( For register new user)
-2. api/v1/users/login   (For login a user)
-3. api/v1/users/update  (For updating profile of an user)
-4. api/v1/content/addContent  (For adding data from .csv file to database)
-5. api/v1/content/readCompleted   ( For completed the read)
-6. api/v1/content/like  ( For like a content)
-7. api/v1/content/updateContent   (For updating the story and title)
-8. api/v1/newContent  (sorted on date)
-9. api/v1/topContent  (sorted on user-interaction)
+1. api/s2/users/registration  ( For register new user)
+2. api/s2/users/login   (For login a user)
+3. api/s2/users/update  (For updating profile of an user)
+4. api/s1/content/addContent  (For adding data from .csv file to database)
+5. api/s1/content/readCompleted   ( For completed the read)
+6. api/s3/content/like  ( For like a content)
+7. api/s3/content/updateContent   (For updating the story and title)
+8. api/s3/content/newContent  (sorted on date)
+9. api/s3/content/topContent  (sorted on user-interaction)
 ```
