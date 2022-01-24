@@ -15,7 +15,7 @@ router.post('/' , async(req , res)=>{
 
         if (!firstName || !email || !lastName || !password || !matchPassword || !mobile) {
             return res.send('Please fill all the field')
-        }
+        } 
         if (password !== matchPassword) {
             return res.send('Password does not match')
         }
