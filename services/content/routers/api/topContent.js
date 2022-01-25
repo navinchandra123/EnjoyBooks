@@ -11,14 +11,14 @@ router.get('/' , async(req , res)=>{
             contentDatabase.findOne({_id : element.contentID} , (err, content)=>{
                 result.push(content); 
                 if(result.length === contentID.length){
-                    res.send(result);
+                    res.status(200).send(result);
                 }
             });
         });
         
 
     } catch (error) {
-        console.log(error);
+        // console.log(error);
         res.status(400).send(error);
     }
 })

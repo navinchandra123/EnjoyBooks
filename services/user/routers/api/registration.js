@@ -46,7 +46,7 @@ router.post('/' , async(req , res)=>{
                         console.log('One item iserted successfully....');
 
                         // redirect to Content page
-
+                        res.writeHead(200);
                         return res.send('Redirect to content page');
                     });
                 }
