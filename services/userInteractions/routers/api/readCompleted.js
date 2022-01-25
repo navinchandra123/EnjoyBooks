@@ -1,10 +1,10 @@
 const router = require('express').Router();
-const contentDatabase = require('../../models/contentDatabase')
+const contentDatabase = require('../../models/userInteractionDatabase')
 
-router.post('/' , async(req , res)=>{
+router.post('/:contentID' , async(req , res)=>{
     try {
-        var { _id } = req.body;
-        contentDatabase.updateMany({_id: _id} ,
+        var contentID = req.params.contentID;
+        contentDatabase.updateMany({contentID: contentID} ,
             {
                 $inc: {noOfReads:1}
             },()=>{
