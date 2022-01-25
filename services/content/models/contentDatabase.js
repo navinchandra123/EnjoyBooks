@@ -13,14 +13,6 @@ const contentSchema = new mongoose.Schema({
         type:Date,
         required:true,
     },
-    noOfLikes: {
-        type:Number,
-        default: 0,
-    },
-    noOfReads: {
-        type:Number,
-        default: 0
-    },
 });
 
 const contentDatabase = mongoose.model('CONTENT_DATABASE', contentSchema);
